@@ -1214,32 +1214,42 @@
   }
 }
 @media (max-width: 600px) {
-  /* main-buttons 컨테이너가 세로로 중앙 정렬하도록 */
-  .main-buttons {
-    height: 100vh;              /* 화면 전체 높이 사용 */
-    justify-content: center;    /* 수직 중앙 정렬 */
-    padding: 0;
+  /* intro 섹션 */
+  #intro {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 70px; /* 네비 높이 만큼 여유 */
   }
 
-  /* 고정 위치(top) 없애고, 너비만 반응형으로 지정 */
-  .btn-large-round {
-    position: static !important;  /* relative + top 제거 */
-    top: auto !important;
-    width: 70vw;                  /* 화면 폭의 70% */
-    max-width: 350px;             /* 데스크탑과 동일한 최대 크기 */
-    height: auto;                 /* 비율 그대로 유지 */
-    margin: 0 auto;               /* 가로 중앙 정렬 */
+  /* 버튼을 절대 중앙에 고정 */
+  #intro .main-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .btn-large-round .btn-icon {
-    width: 100%;                  /* 부모 너비에 딱 맞춤 */
+
+  /* 원래 top 값 무력화 */
+  #intro .btn-large-round,
+  #intro .btn-small-flat {
+    position: static !important;
+    top: auto      !important;
+    margin: 0.8rem auto 0;
+  }
+
+  /* 버튼 크기 반응형 조절 */
+  #intro .btn-large-round {
+    width: 70vw;
+    max-width: 350px;
     height: auto;
   }
-
-  /* 아래 작은 버튼도 고정 위치 제거 */
-  .btn-small-flat {
-    position: static !important;
-    top: auto !important;
-    margin: 1.5rem auto 0;        /* 데스크탑 크기의 위치 감각만 살짝 유지 */
+  #intro .btn-large-round .btn-icon {
+    width: 100%;
+    height: auto;
   }
 }
   </style>
