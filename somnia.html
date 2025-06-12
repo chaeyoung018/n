@@ -1310,6 +1310,42 @@
     padding: 0.5rem 1rem;
     white-space: nowrap;      /* 텍스트가 줄바꿈되지 않도록 */
   }
+     #quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 시작 지점부터 쌓이도록 */
+    padding-top: 20px;           /* 상단 여유 */
+    height: auto;                /* 필요하면 섹션 높이 자동 조절 */
+  }
+
+  /* 질문 박스 크기 줄이고 중앙 정렬 유지 */
+  .question-box {
+    width: 95%;       /* 화면 가로 대비 95% */
+    max-width: 360px; /* 데스크탑보다 좁게 */
+    padding: 1rem;    /* 안쪽 여백 줄임 */
+    margin: 0 auto 1rem; /* 위쪽 마진 없애고 아래만 */
+  }
+
+  /* 질문 텍스트 크기 및 옵션 버튼 크기 축소 */
+  .question-box h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  .choice-btn {
+    font-size: 0.9rem;
+    padding: 0.7em;
+    margin: 0.4em 0;
+  }
+
+  /* 진행 표시(dot) 크기 줄이기 */
+  .progress {
+    margin-bottom: 0.6rem;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    margin: 0 1px;
+  }
 }
   </style>
 </head>
