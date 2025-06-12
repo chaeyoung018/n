@@ -1275,6 +1275,38 @@
     height: 65px;
   }
 }
+  /* 1. history 섹션 자체를 스크롤 가능하도록 */
+  #history {
+    height: auto !important;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 80px;     /* 하단 내비 덮이지 않도록 여유 */
+  }
+
+  /* 2. 컨테이너 크기·여백·패딩 줄이기 */
+  .history-container {
+    margin: 1rem auto 1rem;
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  /* 3. 차트 높이 축소 */
+  #historyChart {
+    height: 200px !important;
+  }
+
+  /* 4. 헤더 폰트 크기 줄이기 */
+  .history-header {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 5. 액션 버튼 훨씬 작게, 한 줄로 강제 */
+  .history-actions .history-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;      /* 텍스트가 줄바꿈되지 않도록 */
+  }
 }
   </style>
 </head>
