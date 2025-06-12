@@ -1408,6 +1408,13 @@
   #quiz #options-list {
     transform: translateX(-5%);
   }
+   /* result-card를 컨테이너 중앙에 딱 맞게 */
+  #result .result-card {
+    /* 기존 95vw 대신 부모 패딩(좌우 1rem)만큼 뺀 크기 */
+    width: calc(100% - 2rem) !important;
+    /* 위/아래 마진은 그대로, 좌우는 auto로 센터링 */
+    margin: 1rem auto 2rem !important;
+  }
 }
   </style>
 </head>
