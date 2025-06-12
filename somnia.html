@@ -1415,6 +1415,20 @@
     /* 위/아래 마진은 그대로, 좌우는 auto로 센터링 */
     margin: 1rem auto 2rem !important;
   }
+  .result-actions {
+    display: flex;
+    flex-wrap: nowrap;       /* 무조건 한 줄 */
+    gap: 0.5rem;             /* 버튼 간격 */
+    justify-content: center; /* 가운데 정렬 */
+  }
+
+  /* 버튼 너비 자동 분배 */
+  .result-actions .btn-glow {
+    flex: 1;                 /* 남는 공간 균등 분배 */
+    white-space: nowrap;     /* 텍스트 줄바꿈 방지 */
+    padding: 0.8rem 0;       /* 세로 패딩만 살짝 조정 */
+    font-size: 0.9rem;       /* 모바일에 맞게 폰트 약간 축소 */
+  }
 }
   </style>
 </head>
