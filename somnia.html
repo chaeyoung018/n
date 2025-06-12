@@ -1213,74 +1213,33 @@
     transform: translateY(0);
   }
 }
-
-@media screen and (max-width: 430px) {
-  section {
-    transform: scale(0.8);
-    transform-origin: top center;
-    width: 90%;
-    margin: 0 auto;
+@media (max-width: 600px) {
+  /* main-buttons 컨테이너가 세로로 중앙 정렬하도록 */
+  .main-buttons {
+    height: 100vh;              /* 화면 전체 높이 사용 */
+    justify-content: center;    /* 수직 중앙 정렬 */
     padding: 0;
-    box-sizing: border-box;
-    margin-bottom: 60px;
   }
 
-  .logo {
-    transform: scale(2.0);
-    max-width: 200%;
-    margin: 20px auto;
+  /* 고정 위치(top) 없애고, 너비만 반응형으로 지정 */
+  .btn-large-round {
+    position: static !important;  /* relative + top 제거 */
+    top: auto !important;
+    width: 70vw;                  /* 화면 폭의 70% */
+    max-width: 350px;             /* 데스크탑과 동일한 최대 크기 */
+    height: auto;                 /* 비율 그대로 유지 */
+    margin: 0 auto;               /* 가로 중앙 정렬 */
   }
-
-  .bottom-nav {
-    height: 70px;
-    padding: 0 15px;
-  }
-
-  .nav-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .nav-item {
-    padding: 8px 12px;
-  }
-
-  .result-box {
-    width: 100%;
-    margin: 10px auto;
-    padding: 15px;
-    margin-bottom: 70px;
-    box-sizing: border-box;
-    justify-content: center;
-  }
-
-  img {
-    max-width: 100%;
+  .btn-large-round .btn-icon {
+    width: 100%;                  /* 부모 너비에 딱 맞춤 */
     height: auto;
   }
 
-  .score-box, .type-box {
-    width: 90%;
-    margin: 10px auto;
-    transform: none;
-    box-sizing: border-box;
-    justify-content: center;
-  }
-
-  #result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 70px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 10px;
-  }
-
-  #result > div {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
+  /* 아래 작은 버튼도 고정 위치 제거 */
+  .btn-small-flat {
+    position: static !important;
+    top: auto !important;
+    margin: 1.5rem auto 0;        /* 데스크탑 크기의 위치 감각만 살짝 유지 */
   }
 }
   </style>
@@ -1288,7 +1247,7 @@
 <body>
   <section id="intro" class="section active">
     <img src="e.png" alt="SOMNIA 로고" class="logo move-up" />
-    
+    <p>당신만을 위한 수면 처방</p>
     <div class="main-buttons">
       <button class="btn btn-large-round" onclick="navigate('quiz')"><img src="d.png" alt="아이콘" class="btn-icon" /></button>
       <button class="btn btn-small-flat" onclick="navigate('history')">수면 히스토리</button>
