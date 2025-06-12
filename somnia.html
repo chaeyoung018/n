@@ -1307,7 +1307,7 @@
   /* 3. 차트 높이 축소 */
   #historyChart {
     width: 100%   !important;
-    height: 180px !important; 
+    height: 200px !important; 
     aspect-ratio: 16 / 9 !important; 
     padding: 0;     
   }
@@ -1857,6 +1857,7 @@
                     weight: '500'
                   },
                   stepSize: 20,
+                  autoSkip: false, 
                   padding: 10,
                   callback: function(value) {
                     return value <= 100 ? `${value}점` : '';
