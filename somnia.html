@@ -1698,7 +1698,7 @@
           },
           options: {
             responsive: true,
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             layout: {
               padding: {
                 top: 30,
@@ -1744,9 +1744,16 @@
                 }
               },
               y: {
+                 min: 0,                     // 최소 0
+        max: 100,                   // 최대 100
+        beginAtZero: true,
+        ticks: {
+          stepSize: 20,             // 20단위로 고정
+          autoSkip: false,          // 절대 건너뛰지 않음
+          maxTicksLimit: 6,         // 최대 6개만
+          callback: v => `${v}점`
                 display: true,
-                beginAtZero: true,
-                max: 120,
+                
                 grid: {
                   display: true,
                   color: 'rgba(255, 255, 255, 0.08)',
