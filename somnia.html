@@ -1275,6 +1275,20 @@
     height: 65px;
   }
 }
+  .section {
+    display: flex;
+    /* …중략… */
+    overflow: hidden;
+    }
+    
+  .section:not(.active) {
+    display: none !important;
+  }
+  /* active 인 녀석만 flex 로 */
+    
+  .section.active {
+    display: flex !important;
+  } 
   /* 1. history 섹션 자체를 스크롤 가능하도록 */
   #history {
     height: auto !important;
@@ -1345,6 +1359,11 @@
     width: 6px;
     height: 6px;
     margin: 0 1px;
+  }
+   #result .result-container {
+    height: 100%;        /* 섹션 꽉 채우기 */
+    overflow-y: auto;    /* 세로 스크롤 온리 */
+    -webkit-overflow-scrolling: touch; /* 부드러운 iOS 스크롤 */
   }
 }
   </style>
