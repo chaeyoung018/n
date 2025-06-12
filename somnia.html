@@ -1223,7 +1223,7 @@
  /* — 로고 크기 줄이고 위로 이동 — */
   #intro .logo {
     width: 750vw;         /* 화면 너비 대비 70% */
-    max-width: 1000px;    /* 최대 300px */
+    max-width: 900px;    /* 최대 300px */
     height: auto;
     margin-top: -350px;   /* 위로 60px 올림 */
   }
@@ -1236,7 +1236,7 @@
   /* 버튼을 절대 중앙에 고정 */
   #intro .main-buttons {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -1263,6 +1263,17 @@
     width: 100%;
     height: auto;
   }
+  .bottom-nav {
+    padding: 0.3rem 0;             /* 위·아래 패딩을 줄여서 높이 축소 */
+  }
+  .bottom-nav .nav-item {
+    padding: 0.2rem 0;             /* 각 버튼 클릭 영역도 살짝 줄임 */
+  }
+  .bottom-nav .nav-icon {
+    width: 50px;                   /* 아이콘 크기 축소 */
+    height: 50px;
+  }
+}
 }
   </style>
 </head>
