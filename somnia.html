@@ -1306,10 +1306,11 @@
 
   /* 3. 차트 높이 축소 */
   #historyChart {
-    width: 100%   !important;
-    height: 200px !important; 
-    aspect-ratio: auto !important; 
-    padding: 0;     
+    width: 100% !important;
+    /* height 고정 대신 aspect-ratio 유지 */
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    padding: 0 !important;
   }
 
   /* 4. 헤더 폰트 크기 줄이기 */
@@ -1790,7 +1791,7 @@
           },
           options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             layout: {
               padding: {
                 top: 30,
